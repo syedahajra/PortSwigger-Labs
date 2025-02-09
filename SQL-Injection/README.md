@@ -7,6 +7,7 @@ SELECT * FROM products WHERE category = 'Gifts' AND released = 1
 To solve the lab, I perform a SQL injection attack that causes the application to display one or more unreleased products.
 
 I change the parameters being passed to *category* by adding ' OR 1=1-- in the end: 
+
 https://web-security-academy.net/filter?category=Corporate+gifts%27+OR+1=1--
 
 This payload effectively altered the SQL query, making the condition always true (1=1), thereby displaying all products, including unreleased ones.
